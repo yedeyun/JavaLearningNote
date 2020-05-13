@@ -1,0 +1,8 @@
+Object类的equals 方法容易抛出空指针异常, 应该使用常量或确定有值的对象的引用调用equals
+不能使用一个值为null的引用类型来指向非静态的方法,否则会抛出异常
+String str = null;
+str.equals("dd")> 改 >"dd".equals(str) > 改 > Objects.equals(str,"dd")
+总结如下:
+每种原始类型都有默认值一样，如int默认值为 0，boolean 的默认值为 false，null 是任何引用类型的默认值，不严格的说是所有 Object 类型的默认值。
+可以使用 == 或者 != 操作来比较null值，但是不能使用其他算法或者逻辑操作。在Java中null == null将返回true。
+不能使用一个值为null的引用类型变量来调用非静态方法，否则会抛出异常
